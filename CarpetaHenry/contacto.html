@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>Este es el formulario de contacto</h1>
+    </header>
+    <main>
+        <div>
+            <h2>Este es un formulario para que puedas contactarme</h2>
+        </div>
+
+        <form>
+            <div>
+                <label for="Nombre">Nombre: </label> <!-- El atributo For es para vincular el Label con el input, dandole el name del input, ej name="Nombre" -> for="Nombre"-->
+                <input type="text" name="Nombre"/> <!-- se cierra a si misma y aparece una caja de texto en la página, pero tiene diferentes tipos, no tiene que ser solo de texto-->
+            </div>
+
+            <div>
+                <label for="Apellido">Apellido: </label><!--indica que hay que poner en el input-->
+                <input type="text" name="Apellido"/> <!--el atributo name hace "saber al codigo que estoy escribiendo yo ahi"-->
+            </div>
+
+            <div>
+                <label  for="Edad">Edad: </label>
+                <input type="number" name="Edad" placeholder="Edad"/> <!--El atributo placeholder de la etiqueta input me escribe dentro de la caja de input-->
+            </div>
+
+            <div>
+                <label for="Password">Contraseña: </label>
+                <input type="password" name="Password"/>
+            </div>
+
+            <button>Enviar</button> <!--Solo por estar dentro del formulario, lo que entiende htmnl es que debe enviar los datos del formulatio a algun lugar-->
+
+
+
+        </form>
+    </main>
+</body>
+</html>
