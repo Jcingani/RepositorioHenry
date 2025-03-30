@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
     <head>
+        <link rel="stylesheet" href="./reset.css">
+        <link rel="stylesheet" type="text/css" href="./estilos.css"> <!-- link es para linkearlo, rel es para que lo relacione como un estilo y href le indica donde esta el archivo-->
         <meta charset="UTF-8"> <!--es para poner acentos y esas cosas-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Mi página web</title>
@@ -8,60 +10,64 @@
     <body>
 
         <header><!--Etiqueta para separar el encabezado del resto, pero visualmente no cambia nada, es solo para estructurar el codigo-->
-            <h1>Este es el título principal de mi página web</h1>
-            <span>Mi nombre es Juan Cruz.</span> <!--se utiliza para textos cortos, porque no ocupa el 100% de la pantalla-->
-            <span>Home</span>
+            <div id="titulo">
+                <h1 class="title">Este es el título principal de mi página web</h1>
+                <span id="Presentacion">Mi nombre es Juan Cruz.</span> <!--se utiliza para textos cortos, porque no ocupa el 100% de la pantalla-->
+                <span>Home</span>
+            </div>
         </header>
 
         <main><!--Contenido principal-->
 
-            <img src="./int de linea de un conj vect.jpg"/> <!--Sirve para agregar una imagen, y se cierra a si misma, el ./es para buscar dentro de la carpeta-->
+            <!-- <img src="./int de linea de un conj vect.jpg" class="logo" />  Sirve para agregar una imagen, y se cierra a si misma, el ./es para buscar dentro de la carpeta-->
 
 
             <section> <!--es una forma semántica de marcar contenido en un documento HTML-->
+                <div id="cards-container">
+                    <article ><!--"abraza toda la primer noticia"-->
 
-                <h2>Este es un título de una sección de noticias</h2>
+                            <div class="cards"><!--Agrupar elementos, en una cajita ficticia por asi decirlo, ocupa el ancho entero de la pantalla-->
+                                <h3 class="title">Esta es la noticia numero 1</h3>
+                                <p class="miTexto">Este sera el primer parrafo de mi noticia</p>
+                                <p class="miTexto">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                    At id facilis tempora beatae iusto nemo assumenda illum est dolorum.
+                                    Impedit culpa magnam exercitationem enim quos hic fugiat, consequuntur porro alias?</p>
+                            </div>
 
-                <article><!--"abraza toda la primer noticia"-->
-                    <h3>Esta es la noticia numero 1</h3>
+                    </article>
+                    <hr /> <!--Etiqueta que se cierra a si misma pone una linea para separar--> 
+            
+            
+                    <article class="cards">
+                        <h3 class="title">Esta es la noticia numero 2</h3>
+                        <img src="./11130473.jpg" class="logo" />
+                            <p >Este es un listado de cosas estara ordenado</p>
+                            <ol><!--Ordered list-->
+                                <li>Este es el item1</li>
+                                <li>Este es el item2</li>
+                                <li>Este es el item3</li>
+                            </ol>
+                    </article>
 
-                        <div><!--Agrupar elementos, en una cajita ficticia por asi decirlo, ocupa el ancho entero de la pantalla-->
-                            <p>Este sera el primer parrafo de mi noticia</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At id facilis tempora beatae iusto nemo assumenda illum est dolorum.
-                            Impedit culpa magnam exercitationem enim quos hic fugiat, consequuntur porro alias?</p>
+                    <hr />
+
+                    <article >
+                        <div class="cards">       
+                            <h3 class="title"> Esta es la noticia numero 3</h3>
+                                <p >Este listado de cosa importantes no estara ordenado</p>
+                                <ul> <!--Unordered list-->
+                                    <li>Este es el item1</li>
+                                    <li>Este es el item2</li>
+                                    <li>Este es el item3</li>
+                                </ul>
                         </div>
-
-                </article>
-                <hr /> <!--Etiqueta que se cierra a si misma pone una linea para separar--> 
-        
-        
-                <article>
-                    <h3>Esta es la noticia numero 2</h3>
-                        <p>Este es un listado de cosas estara ordenado</p>
-                        <ol><!--Ordered list-->
-                            <li>Este es el item1</li>
-                            <li>Este es el item2</li>
-                            <li>Este es el item3</li>
-                        </ol>
-                </article>
-
-                <hr />
-
-                <article>
-                    <h3> Esta es la noticia numero 3</h3>
-                        <p>Este listado de cosa importantes no estara ordenado</p>
-                        <ul> <!--Unordered list-->
-                            <li>Este es el item1</li>
-                            <li>Este es el item2</li>
-                            <li>Este es el item3</li>
-                        </ul>
-                </article>
-
+                    </article>
+                </div>
             </section>
         </main>
 
         <footer><!--Va debajo del contenido principal-->
-            <p>
+            <p class="miTexto">
                 Este es el footer de mi pagina ahorav voy a poner algunos enlaces
             </p>
                 <a href="./contacto.html"> Formulario de contacto </a> <!-- href es para poner un link por asi decirlo-->

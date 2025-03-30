@@ -1,0 +1,66 @@
+.title{ /* .title sirve para las seleccion de clase, son mas especificas, se le puede asignar la misma clase a todos los elementos que yo quiera, sea titulo, parrafo, etc*/
+    background-color: red;
+    width: 15vw;
+}
+
+.miTexto{
+    font-size: 1.5em;
+    color: green;
+    width: 30vw;
+}
+
+body{  /* la etiqueta body solo,  sirve para las seleccion de etiqueta, actua en todo lo que lleve esa etiqueta, sirve solo para la etiqueta que se pone en este caso body*/
+    color: rgb(42, 85, 85);
+}
+
+#Presentacion{
+    color: blue;
+    font-size: 3em;
+}
+
+.logo{
+    width: 20em; /* ancho de imagen, los px son medidas absolutas, no varian, es conveniente usar em */
+    height: 10em;
+}
+
+/* em es un tamaño de fuente realtiva a la fuente que tenemos de base en el dispositivo*/
+
+#titulo{
+    /* border: 2px solid black; primera parte es el ancho del borde, dsp como va a ser solido, linea punteada, etc y dsp el color */
+    width: 35vw; /* viewport width, es un porcentaje del ancho de la pantalla donde yo este */ 
+    margin: auto; /*lo centra automaticamente en la pantallaa */
+    padding: 3em; /*se despega del borde un poco */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cards{
+    border: 2px solid black;
+    width: auto; /* tene el ancho que tengas que tener para contener el contenido justo */
+    padding: 1em 1em 2em 1em; /* sigue la logica de las agujas del reloj arriba, derecha abajo izquierda */
+    border-radius: 10%;
+    transition: 1s; /* establece el tiempo que yo quiero que lleve la transformacion del hover de abajo, va apareciendo de a poco */ 
+    display: flex;
+    flex-direction: column;
+    gap: 1em; /* espacio que va a haber entre un elemento y otro */
+    align-items:center; /*es para alinear los items*/
+}
+
+.cards:hover {/* pseudo selector :hover significa, la clase cards cuando yo le paso el mouse por encima */
+    background-color: blueviolet;
+}
+
+#cards-container{
+    background-color: brown;
+    width: 100vw;
+    margin: auto;
+    margin: top 1.5em; /* margen de arriba */
+    border: 2px solid grey;
+    border-radius: 5%; 
+    padding: 2em; /* si le doy un solo valor se cumple el mismo para los 4 */
+    display: flex; /* es como decirle a partir de ahora vos vas a seguir la logica de flex para posicionar y ver el contenido */
+    flex-direction: row; /* los pone ordenados en una columna con column y row los pone en fila */
+    justify-content: space-around; /* flex start, todos los elementos pegados a la izquierda, flex end todos pegados a la derecha, space around va a tener siempre la misma
+    distancia al rededor, space between los elementos van a tener la misma distancia entre ellos*/
+}
